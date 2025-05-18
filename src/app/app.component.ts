@@ -10,6 +10,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
 
+title : string = 'TITRE - APPCOMPONENT'
 tab : string[] = ['said','amine','lilia','celia'];
 
 supprimer(){
