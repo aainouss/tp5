@@ -1,0 +1,22 @@
+<h2>Liste des utilisateurs</h2>
+
+<ul *ngIf="tab.length > 0 ; else message">
+  <li *ngFor="let user of tab">
+    {{user}}
+  </li>
+</ul>
+
+
+
+<hr>
+
+
+<ng-template #message>
+  <p>Aucun utilisateur dans la liste</p>
+</ng-template>
+
+<button (click)="vider()">Vider le tableau</button>
+<button (click)="supprimer()">Supprimer l'utilisateur</button>
+
+<input #text placeholder="Nouveau utilisateur"/>
+<button (click)="ajouter(text.value);text.value='' ">Ajouter l'utilisateur</button>
